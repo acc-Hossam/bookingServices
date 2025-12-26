@@ -1,0 +1,44 @@
+
+1. Start Server
+Run npm run dev to start server on port 5000 (default).
+
+2. Test Endpoints (via Postman or Curl)
+Register User
+POST http://localhost:5000/api/auth/register
+
+{
+  "name": "Test Client",
+  "email": "client@test.com",
+  "password": "123"
+}
+Login User
+POST http://localhost:5000/api/auth/login
+
+{
+  "email": "client@test.com",
+  "password": "123"
+}
+Returns Token
+
+Create Service (Admin Only)
+Need to manually set role='admin' in DB for first admin or adjust reg logic for testing. POST http://localhost:5000/api/services Headers: Authorization: Bearer <TOKEN>
+
+{
+  "name": "Full Body Massage",
+  "description": "Relaxing massage",
+  "price": 50,
+  "duration": 60,
+  "category": "spa"
+}
+Book Service
+POST http://localhost:5000/api/bookings Headers: Authorization: Bearer <TOKEN>
+
+{
+  "serviceId": "<SERVICE_ID>"
+}
+
+all servisess 
+
+
+user profile 
+

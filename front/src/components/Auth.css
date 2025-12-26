@@ -1,0 +1,115 @@
+/* Calm Auth Design */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    /* Soft blue-gray background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    /* Very soft shadow */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        width: 90%;
+        padding: 2rem 1.5rem;
+        max-width: none;
+    }
+
+    .auth-title {
+        font-size: 1.75rem;
+    }
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+}
+
+.auth-title {
+    margin-bottom: 2rem;
+    color: #4a5568;
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #f7fafc;
+    font-size: 1rem;
+    color: #4a5568;
+    outline: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect width */
+}
+
+.form-input:focus {
+    border-color: #a0aec0;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(160, 174, 192, 0.2);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 0.85rem;
+    margin-top: 1rem;
+    background-color: #7aa5e5;
+    /* Calming blue */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.auth-button:hover {
+    background-color: #6b93d6;
+}
+
+.auth-button:active {
+    transform: scale(0.98);
+}
+
+.auth-link {
+    display: block;
+    margin-top: 1.5rem;
+    color: #a0aec0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.auth-link:hover {
+    color: #7aa5e5;
+}
